@@ -59,10 +59,10 @@ router.post(
               "payment",
 
            success_url:
-  `http://localhost:5173/success?orderId=${req.body.orderId}`,
+  `https://aditya-handloom.vercel.app/success?orderId=${req.body.orderId}`,
 
             cancel_url:
-              "http://localhost:5173/cancel",
+              "https://aditya-handloom.vercel.app/cancel",
           }
         );
 
