@@ -1,44 +1,83 @@
 # 🛍️ Aditya Handloom
 
-A modern full-stack e-commerce platform built with the MERN stack, designed to deliver a smooth shopping experience for premium handloom and fashion products.
+<div align="center">
 
-🌐 Live Demo: https://aditya-handloom.vercel.app
+### Premium Handloom E-Commerce Platform
+
+A modern and scalable full-stack e-commerce application built using the MERN stack, offering seamless shopping, secure authentication, online payments, and comprehensive admin management.
+
+🌐 **Live Demo:** https://aditya-handloom.vercel.app
+
+</div>
 
 ---
 
-## ✨ Features
+## 📖 Overview
 
-### 👤 Authentication
+Aditya Handloom is a feature-rich e-commerce platform designed to provide users with a smooth online shopping experience for premium handloom and traditional clothing products. The platform includes secure authentication, product browsing, advanced filtering, Stripe-powered payments, order tracking, and an admin dashboard for managing inventory and users.
 
-- User registration and login
+---
+
+## ✨ Key Features
+
+### 👤 User Authentication & Authorization
+
+- Secure user registration and login
 - JWT-based authentication
-- Secure password encryption
+- Password hashing using bcrypt
 - Role-based access control (Admin/User)
+- Persistent login sessions
+
+---
 
 ### 🛒 Shopping Experience
 
-- Browse products
+- Browse premium handloom collections
 - Product search and filtering
-- Product categories
-- Shopping cart functionality
-- Checkout flow
-- Stripe payment integration
+- Category-based shopping
+- Responsive product cards
+- Add and remove products from cart
+- Dynamic cart updates
 
-### 📦 Orders
+---
+
+### 💳 Checkout & Payments
+
+- Secure checkout workflow
+- Stripe payment gateway integration
+- Payment success and cancellation pages
+- Automatic order creation
+- Payment status tracking
+
+---
+
+### 📦 Order Management
 
 - Place orders securely
 - View order history
-- Order status updates
-- Real-time stock management
+- Track order status
+- Payment confirmation
+- Automatic stock updates after purchase
+
+---
 
 ### 🛠️ Admin Dashboard
 
+- Manage products
 - Add new products
 - Edit product details
 - Delete products
-- Manage users
-- Manage orders
+- Manage customers
 - Update order status
+- Monitor inventory
+
+---
+
+### ☁️ Media & Cloud Integration
+
+- Cloudinary image uploads
+- Cloud-based product storage
+- Fast image delivery
 
 ---
 
@@ -46,74 +85,112 @@ A modern full-stack e-commerce platform built with the MERN stack, designed to d
 
 ### Frontend
 
-- React.js
-- Vite
-- Tailwind CSS
-- React Router
-- Axios
+| Technology | Usage |
+|------------|--------|
+| React.js | UI Development |
+| Vite | Build Tool |
+| Tailwind CSS | Styling |
+| React Router DOM | Routing |
+| Axios | API Communication |
+
+---
 
 ### Backend
 
-- Node.js
-- Express.js
-- MongoDB
-- Mongoose
-- JWT Authentication
-- bcrypt.js
+| Technology | Usage |
+|------------|--------|
+| Node.js | Runtime Environment |
+| Express.js | Backend Framework |
+| MongoDB | Database |
+| Mongoose | ODM |
+| JWT | Authentication |
+| bcrypt.js | Password Encryption |
 
-### Payments & Deployment
+---
 
-- Stripe
-- Vercel
-- Render
-- MongoDB Atlas
+### Payments & Cloud
+
+| Service | Purpose |
+|----------|----------|
+| Stripe | Online Payments |
+| Cloudinary | Image Storage |
+| MongoDB Atlas | Database Hosting |
+
+---
+
+### Deployment
+
+| Platform | Usage |
+|----------|--------|
+| Vercel | Frontend Deployment |
+| Render | Backend Deployment |
 
 ---
 
 ## 📂 Project Structure
 
 ```bash
-Aditya-Handloom/
+Aditya-Handloom
 │
-├── client/
-│   ├── src/
-│   ├── public/
+├── client
+│   ├── public
+│   ├── src
+│   │   ├── assets
+│   │   ├── components
+│   │   ├── context
+│   │   ├── pages
+│   │   ├── services
+│   │   └── App.jsx
+│   │
 │   └── package.json
 │
-├── server/
-│   ├── controllers/
-│   ├── middleware/
-│   ├── models/
-│   ├── routes/
-│   └── package.json
+├── server
+│   ├── config
+│   ├── controllers
+│   ├── middleware
+│   ├── models
+│   ├── routes
+│   ├── uploads
+│   └── server.js
 │
 └── README.md
 ```
 
 ---
 
-## ⚙️ Environment Variables
+## 🔐 Environment Variables
 
 ### Backend (`server/.env`)
 
 ```env
-PORT=5000
-MONGO_URI=your_mongodb_uri
-JWT_SECRET=your_secret_key
+MONGO_URI=your_mongodb_connection_string
+
+JWT_SECRET=your_jwt_secret
+
+CLOUDINARY_CLOUD_NAME=your_cloud_name
+
+CLOUDINARY_API_KEY=your_cloudinary_api_key
+
+CLOUDINARY_API_SECRET=your_cloudinary_api_secret
+
 STRIPE_SECRET_KEY=your_stripe_secret_key
+
 CLIENT_URL=https://aditya-handloom.vercel.app
-```
-
-### Frontend (`client/.env`)
-
-```env
-VITE_API_URL=https://your-render-backend-url/api
-VITE_STRIPE_PUBLIC_KEY=your_public_key
 ```
 
 ---
 
-## 🖥️ Installation
+### Frontend (`client/.env`)
+
+```env
+VITE_API_URL=https://your-backend-url/api
+
+VITE_STRIPE_PUBLIC_KEY=your_stripe_public_key
+```
+
+---
+
+## ⚙️ Installation & Setup
 
 ### Clone the repository
 
@@ -121,82 +198,168 @@ VITE_STRIPE_PUBLIC_KEY=your_public_key
 git clone https://github.com/Aditya-gupta149/Aditya-Handloom.git
 ```
 
-### Backend setup
+---
+
+### Backend Setup
 
 ```bash
 cd server
+
 npm install
+
 npm run dev
 ```
 
-### Frontend setup
+Backend will run on:
+
+```bash
+http://localhost:5000
+```
+
+---
+
+### Frontend Setup
 
 ```bash
 cd client
+
 npm install
+
 npm run dev
+```
+
+Frontend will run on:
+
+```bash
+http://localhost:5173
 ```
 
 ---
 
-## 📸 Screenshots
+## 📸 Application Screenshots
 
-Add screenshots of:
+### 🏠 Home Page
 
--## Home Page
-- <img width="1897" height="918" alt="Screenshot 2026-07-13 182829" src="https://github.com/user-attachments/assets/f47d8b36-9a4f-48a4-bfc0-f23b89f302b8" />
-- <img width="1907" height="878" alt="Screenshot 2026-07-13 182937" src="https://github.com/user-attachments/assets/3ff034df-ddcc-4d7c-bc56-f3e60f7d6ccd" />
-
-
--## Shop Page
-- <img width="1888" height="857" alt="Screenshot 2026-07-13 183006" src="https://github.com/user-attachments/assets/334e5c68-67e3-4498-85fc-97faa450e1f1" />
-  <img width="1876" height="848" alt="Screenshot 2026-07-13 183042" src="https://github.com/user-attachments/assets/74880cd0-f571-4498-9964-28678a3a416f" />
-
-
--## My Orders & Payment
-- <img width="1905" height="846" alt="Screenshot 2026-07-13 183309" src="https://github.com/user-attachments/assets/8c10d67e-347f-48df-88aa-abd360d87edc" />
-  <img width="1858" height="892" alt="Screenshot 2026-07-13 192253" src="https://github.com/user-attachments/assets/d68cd586-1ab5-43ea-9dfb-782844798918" />
-
-
--## Cart
-- <img width="1873" height="771" alt="Screenshot 2026-07-13 183112" src="https://github.com/user-attachments/assets/c1c6b051-ad9c-4c29-ad98-0c618587321d" />
-
--## Checkout
-- <img width="1812" height="897" alt="Screenshot 2026-07-13 183133" src="https://github.com/user-attachments/assets/5748167f-9640-4547-a27a-48a363661a87" />
-  <img width="1815" height="846" alt="Screenshot 2026-07-13 183211" src="https://github.com/user-attachments/assets/bdca951a-1823-4006-ac2e-18541bcfb61f" />
-
-
--## Admin Dashboard & Order page, Product page
-- <img width="1917" height="970" alt="Screenshot 2026-07-13 195615" src="https://github.com/user-attachments/assets/e70d7a6a-3fd8-4428-8bbe-cb03a5d3427c" />
-  <img width="1851" height="851" alt="Screenshot 2026-07-13 195703" src="https://github.com/user-attachments/assets/fae4997b-921a-4609-a3df-8c527eaa3be7" />
-  <img width="1845" height="847" alt="Screenshot 2026-07-13 195905" src="https://github.com/user-attachments/assets/edd6f614-320f-40d7-bc2d-8ac5d3c0ec0d" />
-
-
-
+<img width="1897" height="918" alt="Screenshot 2026-07-13 182829" src="https://github.com/user-attachments/assets/1a3645d4-ebc5-4004-993c-83669d0e0524" />
 
 ---
 
-## 🎯 Future Improvements
+### 🛍️ Shop Page
 
-- Wishlist feature
+<img width="1888" height="857" alt="Screenshot 2026-07-13 183006" src="https://github.com/user-attachments/assets/5959120b-f6b2-4c23-b2ca-1a1224e3b048" />
+
+---
+
+### 🛒 Cart
+
+<img width="1873" height="771" alt="Screenshot 2026-07-13 183112" src="https://github.com/user-attachments/assets/30f1baf6-5d98-4fdf-9c71-fb28663bec65" />
+
+---
+
+### 💳 Checkout & Payment
+
+<img width="1812" height="897" alt="Screenshot 2026-07-13 183133" src="https://github.com/user-attachments/assets/34c8cdac-e488-417c-bd75-c296c663b03c" />
+
+<img width="1815" height="846" alt="Screenshot 2026-07-13 183211" src="https://github.com/user-attachments/assets/d1b419d8-2a23-4a23-aeb8-1cd058358cad" />
+<img width="1858" height="892" alt="Screenshot 2026-07-13 192253" src="https://github.com/user-attachments/assets/47a8589a-c82f-45b9-8bba-c3d5c79cf08c" />
+
+---
+
+### 📦 My Orders
+
+<img width="1905" height="846" alt="Screenshot 2026-07-13 183309" src="https://github.com/user-attachments/assets/8ebdcd05-f6b2-4868-b448-6f8027a5f460" />
+
+---
+
+### 👨‍💼 Admin Dashboard
+
+<img width="1917" height="970" alt="Screenshot 2026-07-13 195615" src="https://github.com/user-attachments/assets/846c9e0f-a470-439f-af88-cc735196d6b4" />
+
+---
+
+### 📋 Product Management
+
+<img width="1851" height="851" alt="Screenshot 2026-07-13 195703" src="https://github.com/user-attachments/assets/3a27fa28-dbaf-4070-91c7-101704d6f4a3" />
+
+---
+
+### 📊 Order Management
+
+<img width="1845" height="847" alt="Screenshot 2026-07-13 195905" src="https://github.com/user-attachments/assets/5e3b06f9-43bf-4bbd-987c-f5c1f7582de0" />
+
+---
+
+## 🔄 Workflow
+
+```text
+User Registration/Login
+            ↓
+      Browse Products
+            ↓
+        Add to Cart
+            ↓
+         Checkout
+            ↓
+      Stripe Payment
+            ↓
+      Order Creation
+            ↓
+     Inventory Update
+            ↓
+       Order Tracking
+```
+
+---
+
+## 🌟 Future Enhancements
+
+- Wishlist functionality
 - Product reviews and ratings
+- Order tracking timeline
+- Coupon and discount system
 - Email notifications
 - Dark mode
-- Order tracking
-- Coupon system
+- AI-powered recommendations
+- Advanced analytics dashboard
+
+---
+
+## 🎯 Learning Outcomes
+
+Through this project, I gained hands-on experience with:
+
+- Full-stack web development
+- REST API design
+- Authentication and authorization
+- Payment gateway integration
+- Cloud storage management
+- Database design
+- Deployment pipelines
+- State management
+- Responsive UI design
 
 ---
 
 ## 👨‍💻 Developer
 
-**Aditya Gupta**
+### Aditya Gupta
 
-- B.Tech, Electronics and Communication Engineering
-- NIT Patna
-- Passionate about Full-Stack Development and Problem Solving
+**B.Tech, Electronics and Communication Engineering**
+
+National Institute of Technology Patna
+
+- 💻 Full-Stack Developer
+- 🧠 Problem Solver
+- 🚀 MERN Stack Enthusiast
 
 GitHub: https://github.com/Aditya-gupta149
 
 ---
 
-⭐ If you like this project, consider giving it a star.
+<div align="center">
+
+### ⭐ If you found this project interesting, consider giving it a star!
+
+Built with ❤️ using the MERN Stack.
+
+</div>
